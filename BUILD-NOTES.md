@@ -93,6 +93,6 @@ field was possible.
    - `.makefun/owner.json` = `{"wallet":"2hQpcsZ6L7b83LxfDam8pHLD4LjFUxNtQKgM5SijE788"}` (same wallet as sibling entries).
    - `LICENSE` — plain MIT text.
    - `.gitignore` — `out/`.
-5. **Verified locally** — (results recorded in the build report; see verification section below).
-6. **Committed + pushed** — (commit hash recorded in the build report).
-7. **GitHub About set and verified** — `gh repo edit ... --add-topic makefun --homepage <bounty URL>`; verified via `gh repo view --json`.
+5. **Verified locally** — Node v24.22.1. `mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts` run twice; `out/entry.txt` byte-identical across both runs (cmp clean), exactly the chosen line. Standalone Python gate check: 163 chars / 163 bytes, 1 line, single sentence (exactly one full stop, no `!`/`?`), non-whitespace, no trailing newline, gate 1–200 PASS. (No module-type warning printed — output clean.)
+6. **Committed + pushed** — commit `7c03407b941d1f0536dfbdcaec6208ac398335ac` (short `7c03407`), message "Absurd Micro-Startup Pitch entry: lazy agents rename final_FINAL_v2 files (163 chars)", 6 files, 209 insertions. Branch is **`master`** (local default). Push `git push -u origin master` succeeded: `* [new branch] master -> master`, working tree clean afterwards. (Git identity was set locally first: user.name samidyt / user.email samidyt@users.noreply.github.com, matching the sibling repos. No execution-risk notice fired at any step in this session.)
+7. **GitHub About set and verified** — `gh repo edit ... --add-topic makefun --homepage <bounty URL>` exit 0; verified via `gh repo view --json`: homepage `https://make.fun/bounty/u-ricoxyz-absurd-micro-startup-pitch-off-12e33571`, topics `["makefun"]`, visibility `PUBLIC`, default branch `master`.
